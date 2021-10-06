@@ -5,7 +5,7 @@ import Constants from 'expo-constants'
 import axios from 'axios'
 import Loading from '../components/Loading'
 
-const URL = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${Constants.manifest.extra.newsApiKey}`
+const URL = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`
 
 export default function HomeScreen({ navigation }) {
   const [articles, setArticles] = useState([])
