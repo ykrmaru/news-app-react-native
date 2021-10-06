@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { StyleSheet, SafeAreaView, FlatList } from 'react-native'
+import { StyleSheet, SafeAreaView, FlatList, StatusBar } from 'react-native'
 import ListItem from '../components/ListItem'
 
 export default ClipScreen = ({ navigation }) => {
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 })

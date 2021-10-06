@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, FlatList, SafeAreaView } from 'react-native'
+import { StyleSheet, FlatList, SafeAreaView, StatusBar } from 'react-native'
 import ListItem from '../components/ListItem'
 import Constants from 'expo-constants'
 import axios from 'axios'
@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 })
